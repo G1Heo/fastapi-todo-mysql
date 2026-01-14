@@ -1,0 +1,12 @@
+2026-01-14 15:17:31.547 | INFO     | main:log_requests:24 - 🚀 [REQUEST] POST http://localhost:8000/todos
+2026-01-14 15:17:35.063 | INFO     | main:log_requests:24 - 🚀 [REQUEST] GET http://localhost:8000/todos
+2026-01-14 15:18:26.311 | INFO     | main:log_requests:24 - 🚀 [REQUEST] GET http://localhost:8000/todos
+2026-01-14 15:20:52.186 | INFO     | main:log_requests:24 - 🚀 [REQUEST] GET http://localhost:8000/todos
+2026-01-14 15:22:19.630 | INFO     | main:log_requests:24 - 🚀 [REQUEST] GET http://localhost:8000/todos
+2026-01-14 15:22:19.692 | INFO     | main:log_requests:29 - ✅ [RESPONSE] Status: 200 | Time: 61.79ms
+2026-01-14 15:22:58.613 | INFO     | main:log_requests:24 - 🚀 [REQUEST] GET http://localhost:8000/todos
+2026-01-14 15:22:58.665 | INFO     | main:log_requests:29 - ✅ [RESPONSE] Status: 200 | Time: 52.58ms
+2026-01-14 15:23:27.816 | INFO     | main:log_requests:24 - 🚀 [REQUEST] GET http://localhost:8000/todos
+2026-01-14 15:23:27.842 | INFO     | main:log_requests:29 - ✅ [RESPONSE] Status: 200 | Time: 26.14ms
+2026-01-14 15:23:37.858 | INFO     | main:log_requests:24 - 🚀 [REQUEST] POST http://localhost:8000/todos
+2026-01-14 15:23:37.899 | INFO     | main:log_requests:29 - ✅ [RESPONSE] Status: 200 | Time: 41.54ms

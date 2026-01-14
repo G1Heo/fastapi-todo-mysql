@@ -1,8 +1,37 @@
 from fastapi import FastAPI, Request, HTTPException
 import mysql.connector
+import time
+from loguru import logger
+import sys
 
+# 1. FastAPI 객체 생성
 app = FastAPI()
 
+# 2. 로깅 환경 설정
+logger.remove()
+logger.add(sys.stdout,
+           format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <level>{message}</level>")
+logger.add("api.log", rotation="10 MB")
+
+
+# 3. 미들웨어 설정
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start_time = time.time()
+    method = request.method
+    url = str(request.url)
+
+    logger.info(f"🚀 [REQUEST] {method} {url}")
+
+    response = await call_next(request)
+
+    process_time = (time.time() - start_time) * 1000
+    logger.info(f"✅ [RESPONSE] Status: {response.status_code} | Time: {process_time:.2f}ms")
+
+    return response
+
+
+# 4. DB 연결 함수 및 경로(Route) 정의
 def get_db():
     return mysql.connector.connect(
         host="localhost",
