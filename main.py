@@ -38,7 +38,7 @@ def get_db():
         port=3306,
         user="tester",
         password="tester",
-        database="test_db"
+        database="llmagent"
     )
 
 
